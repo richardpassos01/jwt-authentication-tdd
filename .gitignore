@@ -3,3 +3,4 @@
 .env.test
 /__tests__/coverage
 /__tests__/database.sqlite
+.vscode
