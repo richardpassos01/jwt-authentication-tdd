@@ -13,6 +13,9 @@ module.exports = (sequelize, DataTypes) => {
                 if(user.password) {
                     user.password_hash = await bcrypt.hash(user.password, 8);
                 }
+                if(!user.password) {
+                    throw ({message: 'Invalid argument'});
+                }
             }
         }
     });
